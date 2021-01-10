@@ -1,9 +1,14 @@
+/*eslint-disable */
+//터미널에 뜨는 warning 제거
 import React, { useState } from 'react';
 import { Fragment } from 'react';
 import './App.css';
 
 function App() {
+  //popular-list
   let [모임이름, 모임게시판번호] = useState(['요리', '집사', '취업']);
+
+
   return (
     <>
       <nav className="navbar navbar-light bg-light static-top">
@@ -14,13 +19,14 @@ function App() {
       </nav>
       <header>
         <h1>가장 인기 있는 모임 게시판</h1>
-        <div className='popular' >
+        <hr />
+        <div className='popular-list' >
           <h2>{모임이름[0]}</h2>
         </div>
-        <div className='popular' >
+        <div className='popular-list' >
           <h2>{모임이름[1]}</h2>
         </div>
-        <div className='popular' >
+        <div className='popular-list' >
           <h2>{모임이름[2]}</h2>
         </div>
       </header>
